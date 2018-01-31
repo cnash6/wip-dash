@@ -1,0 +1,27 @@
+// DELETE ME
+// Get tokens using:
+// new Buffer(githubUserName + ':' + githubUserName).toString('base64')
+
+{
+	"projects" : [
+		{
+			"id" : "myCricket",
+			"name" : "My Cricket",
+			"iconURL" : "",
+			"credentials" : {
+				"jira" : {
+					"token" : ""
+				},
+				"github" : {
+					"token" : ""
+				},
+				"slack" : {
+					"token" : ""
+				}
+			}
+		}
+	],
+	"globalConfig" : {
+		"uniqId" : "cnash"
+	}
+}

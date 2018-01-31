@@ -1,0 +1,238 @@
+.jira-board-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.jira-board-left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	right: 30%;
+}
+
+.jira-board-right {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 30%;
+	/*background-color: #5a5255;*/
+	background-color: #EEEEEE;	
+	color: white;
+}
+
+.jira-updates-header {
+	color: #444;
+	height: 55px;
+	background: white;
+	font-size: 30px;
+	text-align: center;
+	padding: 5px;
+	box-shadow: 0px 2px 5px lightgrey;
+}
+
+.jira-board-scroll-container {
+	overflow-y: auto;
+	height: calc(100% - 55px);
+}
+
+.jira-update {
+	position: relative;
+	color: black;
+	/*height: 150px;*/
+	background: #FFF;
+	margin: 15px;
+	border-radius: 5px;
+	text-align: center;
+	/*font-size: 30px;*/
+	border: 1px solid lightgrey;
+	margin-bottom: 25px;
+}
+
+.jira-update-header {
+	border: 1px solid; 
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 0px 5px;
+
+	position: relative;
+	height: 45px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: normal;
+	font-weight: 500;
+}
+
+.jira-update-key {
+	position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: calc(100% - 60px);
+    background: white;
+    font-weight: 600;
+    border-right: 1px solid
+}
+
+.jira-update-key-text {
+	position: relative;
+	top: 12px;
+}
+
+.jira-update-summary {
+	color: black;
+	position: absolute;
+	width: calc(100% - 60px);
+	right: 0px;
+	height: 100%;
+	text-overflow: ellipsis;
+	white-space: initial;
+	overflow: hidden;
+	padding: 0px 5px;
+	font-weight: 500;
+}
+
+.jira-update-timestamp {
+	position: absolute;
+	color: #aaa;
+	font-weight: 200;
+	padding-left: 5px;
+	font-size: 12px;
+}
+
+.jira-update-details {
+	padding: 5px;
+	color: #999;
+	font-weight: 200;
+}
+
+.jira-update-details-field{
+	color: blue;
+}
+
+.jira-update-from {
+	text-decoration: line-through;
+	font-size: 17px;
+	color: rgba(0, 0, 0, 0.47);
+}
+
+.jira-update-to {
+	color: black;
+	font-size: 19px;
+	font-weight: 400;
+}
+
+.jira-new-key {
+	color: black;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.jira-new-summary {
+	color: black;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+.jira-status-container {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	/*background-color: #CDCDCD;*/
+	background: linear-gradient(to top, #DDD , #EEE);
+}
+
+.jira-status-container-left {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	top: 10px;
+	right: 150px;
+}
+
+.jira-status-container-right {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+	width: 140px;
+	background-color: #EEE;
+	padding: 7px;
+	text-align: center;
+
+	border: 1px solid #BBB;
+	/*border-radius: 3px;*/
+	box-shadow: inset 0 0 10px rgb(241, 241, 241);
+}
+
+.jira-status-bar {
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	/*border: 1px solid lightgrey;*/
+	position: relative;
+}
+
+.jira-status-details {
+	width: 100%;
+	height: calc(100% - 40px);
+	background: #EEEEEE;
+	text-align: center;
+}
+
+.jira-status-detail{
+	color: black;
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+	padding: 15px 0px;
+}
+
+.jira-status-detail-text{
+	color: black;
+}
+
+.chunk-color-key {
+	background-color: black;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+.chunk-num {
+	color: black;
+	font-size: 25px;
+	display: inline-block;
+}
+
+.chunk-name {
+    color: #555;
+	font-size: 17px;
+	display: block;
+}
+
+.jira-status-bar-chunk {
+	background: linear-gradient(to right, lightgrey, white);
+	width: 0px;
+    height: 100%;
+    display: inline-block;
+}
+
+.jira-status-total-num{
+	color: black;
+	font-size: 50px;
+	font-weight: 500;
+	display: block;
+}
+
+.jira-status-name {
+	color: black;
+	position: relative;
+	font-size: 16px;
+	top: -10px;
+}

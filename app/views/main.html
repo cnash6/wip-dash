@@ -1,0 +1,37 @@
+<div class="dash-tabs">
+	<div class="dash-tab dash-tab-selected" ng-style="{'background-image' : 'url('+myCricketLogo+')'}">
+	</div>
+</div>
+<div class="dash-container">
+	<div class="dash-layout-slack-content">
+		<div class="dash-layout-top-row">
+			<div class="col col-md-6">
+				<div class="dash-card">
+					<git-web-ui repo="iosRepo" order="iosDrawOrder" logo="'/images/appleLogo.png'"></git-web-ui>
+				</div>
+			</div>
+			<div class="col col-md-6">
+				<div class="dash-card">
+					<jira-board></jira-board>
+				</div>
+			</div>
+		</div>
+		<div class="dash-layout-bottom-row">
+			<div class="col col-md-6">
+				<div class="dash-card">
+					<git-web-ui repo="androidRepo" order="androidDrawOrder" logo="'/images/androidLogo.png'"></git-web-ui>
+				</div>
+			</div>
+			<div class="col col-md-6">
+				<div class="dash-card">
+					<div style="font-size: 50px;font-weight: 600;opacity: .2;text-align: center;position: relative;top: 50%;transform: translateY(-50%);text-shadow: 2px 2px black;-webkit-text-stroke: 1px black;">COMING SOON</div>
+					<div style="font-size: 12px;font-weight: 600;opacity: .2;text-align: center;position: relative;top: 50%;transform: translateY(-50%);">(With Drop Shadows)</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="dash-layout-slack-feed">
+		<slack-feed messages="messages"/>
+	</div>
+</div>

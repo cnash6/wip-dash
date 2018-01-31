@@ -1,0 +1,20 @@
+<!-- <h3 class="text-center">{{name}}</h3> -->
+<!-- <div class="git-webui">
+	<div class="git-tree-container"> 
+		<iframe ng-src="{{url | trusted}}"></iframe>
+	</div>
+	<div class="git-branches">
+		<div class="branches-header">{{name}}</div>
+		<div class="branches-list"></div>
+	</div>
+</div> -->
+<div class="loading-spinner-container" ng-show="loading">
+	<div class="blur-filter"></div>
+	<div class="loading-spinner"></div>
+</div>
+<div class="git-flow-vis-container">
+	<div class="git-flow-vis-logo" ng-style="{'background-image' : 'url('+logo+')'}" stlye></div>
+	<div id="{{divId}}" class="git-flow-vis-tree" ng-show="!loading"></div>
+</div>
+
+

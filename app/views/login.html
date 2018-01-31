@@ -1,0 +1,22 @@
+<div class="dash-container">
+	<div class="login-container">
+<!-- 		<input class="username-input" ng-model="username">
+		<input class="password-input" ng-model="password">
+		<button>Submit</button> -->
+		<form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Username</label>
+		    <input type="text" class="form-control" ng-model="username" placeholder="Username">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" ng-model="password" placeholder="Password">
+		  </div>
+		  <button type="submit" class="btn btn-default btn-lg" ng-click="submit(username, password)" ng-disabled="working">Submit</button>
+		  <div class="loading-spinner-container" ng-show="working">
+		  	<div class="blur-filter"></div>
+		  	<div class="loading-spinner"></div>
+		  </div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,145 @@
+$value-color:       #000;
+$title-color:       rgba(0, 0, 0, 0.7);
+$channel-color:     rgba(0, 0, 0, 1.0);
+$label-color:       rgba(0, 0, 0, 0.7);
+$moreinfo-color:    rgba(0, 0, 0, 0.7);
+
+.fadey-mcfade-face {
+	width: 100%;
+	width: 100%;
+	position: absolute;
+	height: 40px;
+	margin-top: 80px;
+	z-index: 1;
+	background: linear-gradient(to bottom, #2a3f54 0%, rgba(42, 63, 84, 0.1) 85%, transparent 100%);
+}
+
+.message-channel {
+	margin-bottom: 15px;
+	color: rgba(27, 133, 184, .8);
+	display: block;
+	font-size: 29px;
+	font-weight: 600;
+}
+
+.message-user {
+	padding-left: 15px;
+	display: block;
+	color: black;
+	font-weight: 800;
+	font-size: 25px;
+}
+
+.message-value {
+	margin-bottom: 5px;
+	padding-left: 15px;
+	display: inline-block;
+	/*color: #000;*/
+	color: black;
+	font-size: 27px;
+}
+
+.feed-container {
+	position: absolute;
+/*	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;*/
+	top: 80px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.message {
+	color: black;
+	padding: 10px 20px;
+}
+
+.message-card {
+	margin: 15px;
+	background: white;
+	padding: 10px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 3px;
+	padding-left: 25px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.message-avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 4px;
+	display: block;
+	background-size: cover;
+}
+
+.message-left {
+    width: 80px;
+    display: inline-block;
+    position: absolute;
+}
+
+.message-right {
+	padding-left: 80px;
+	width: 100%;
+	display: inline-block;
+}
+
+.slack-feed-header {
+	color: white;
+	font-size: 35px;
+	height: 80px;
+	background-color: #2a3f54;
+	text-align: center;
+	/*box-shadow: 0px 3px 3px #555;*/
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+	left: 0px;
+	font-weight: 700;
+	padding-top: 17px;
+}
+
+.message-card-stripe {
+	background-color: rgba(121,121,121,0.2);
+    position: absolute;
+    height: 100%;
+    display: block;
+    width: 20px;
+    top: 0px;
+    left: 0px;
+}
+
+/*BACKGROUND COLOR FOR CHANNEL*/
+
+.general .message-card-stripe{
+ 	background-color: rgba(137, 65, 174, 0.2);
+}
+.dashing-test .message-card-stripe{
+	background-color: rgba(195, 203, 113, 0.2);
+}
+.random .message-card-stripe{
+	background-color: rgba(27, 133, 184, 0.2);
+}
+.technical .message-card-stripe{
+	background-color: rgba(85, 158, 131, 0.2);
+}
+.ux .message-card-stripe{
+	background-color: rgba(174, 90, 65, 0.2);
+}
+
+
+
+
+
+
+
+
+
+

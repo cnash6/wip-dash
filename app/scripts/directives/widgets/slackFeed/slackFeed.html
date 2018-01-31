@@ -1,0 +1,31 @@
+<!-- <h3 class="text-center">Slack Feed</h3> -->
+<!-- <button ng-click="addMessage()" style="position: absolute; z-index: 100">Click Me</button> -->
+<div class="slack-feed-header" ng-click="addTestMessage()">Slalom MyCricket Team</div>
+<div class="fadey-mcfade-face"></div>
+<div class="feed-container" ng-scroll-bottom="messages">
+<!-- 	<label>Please enter your name: </label>
+	<input ng-model="currentCustomer.name"/>
+	<button ng-click="join()">Join</button>
+	<br/>
+
+	<h1>New Customers: </h1>
+	<ul>
+	  <li ng-repeat="customer in newCustomers">{{customer.name}}</li>
+	</ul> -->
+
+	<div class="message-card" ng-class="messageCard.channel" ng-repeat="messageCard in messageCards">
+		<div class="message-card-stripe"></div>
+		<span class="message-channel">
+			#{{ messageCard.channel }}
+		</span>
+		<div ng-repeat="message in messageCard.messages track by $index" class="message">
+			<div class="message-left">
+				<span ng-if="message.showUser" class="message-avatar" ng-style="{'background-image' : 'url('+message.img+')' }"></span>
+			</div>
+			<div class="message-right">
+				<span ng-if="message.showUser" class="message-user" > @{{ message.user }}</span>
+				<span class="message-value" >{{ message.text }}</span>
+			</div>
+		</div>
+	</div>
+</div>

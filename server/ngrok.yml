@@ -1,0 +1,6 @@
+authtoken: test
+tunnels:
+  dash:
+    addr: 9003
+    proto: http
+    hostname: http://localhost:9003

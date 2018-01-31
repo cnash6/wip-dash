@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+/server/config.json
+/server/cert.pem
+/server/key.pem
+
+*DS_Store

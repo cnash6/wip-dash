@@ -1,0 +1,69 @@
+<div class="loading-spinner-container" ng-show="loaded != 2">
+	<div class="blur-filter"></div>
+	<div class="loading-spinner"></div>
+</div>
+<div class="jira-board-container" ng-show="loaded == 2">
+	<div class="jira-board-left">
+		<div class="jira-status-container" ng-repeat="status in statuses" ng-style="{'height' : status.statusHeight}">
+			<div class="jira-status-container-left">
+				<div class="jira-status-bar">
+					<span class="jira-status-bar-chunk" ng-repeat="chunk in status.barchunks" ng-style="{'width' : chunk.bar_pct, 'background' : chunk.color}"></span>
+				</div>
+				<div class="jira-status-details">
+					<div class="jira-status-detail jsd-col" ng-repeat="chunk in status.barchunks">
+						<span class="chunk-color-key" ng-style="{'background' : chunk.color}"></span>
+						<span class="jira-status-detail-text">
+							<span class="chunk-num">{{chunk.num}}</span>
+							<span class="chunk-name">{{chunk.name}}s</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="jira-status-container-right" ng-style="{'background-color' : status.bgColor}">
+				<span class="jira-status-total-num">{{status.totalIssues}}</span>
+				<span class="jira-status-name">{{status.name}}</span>
+			</div>
+		</div>
+	</div>
+	<div class="jira-board-right">
+		<div class="jira-updates-header">Updates</div>
+		<div class="jira-board-scroll-container">
+			<div class="jira-update" ng-repeat="update in updates | orderBy: update.moment">
+				<div ng-if="update.isnew == 1">
+					<div class="jira-update-header" ng-style="{'background-color' : update.bgcolor, 'border-color': update.color}">
+						{{update.author}}:<br> Created a New Issue
+					</div>
+					<div class="jira-update-details">
+						<div class="jira-new-key" ng-style="{'border-color': update.color}">
+							<div class="jira-new-key-text">{{update.key}}:</div>
+						</div>
+						<div class="jira-new-summary">
+							{{update.summary}} 
+						</div>
+						{{update.status}}
+					</div> 
+				</div>
+				<div ng-if="update.isnew != 1">
+					<div class="jira-update-header" ng-style="{'background-color' : update.bgcolor, 'border-color': update.color}">
+						<div class="jira-update-key" ng-style="{'border-color': update.color}">
+							<div class="jira-update-key-text">{{update.key}}</div>
+						</div>
+						<div class="jira-update-summary">
+							{{update.summary}} 
+						</div>
+					</div>
+					<div class="jira-update-details">
+						{{update.changelog.author}} updated <span class="jira-update-details-field">{{update.changelog.field}}</span>:
+						<div class="jira-update-from">
+							{{update.changelog.from}}
+						</div>
+						<div class="jira-update-to">
+							{{update.changelog.to}}
+						</div>
+					</div>
+				</div>
+				<div class="jira-update-timestamp" >{{update.momentformat}}</div>
+			</div>
+		</div>
+	</div>
+</div>
